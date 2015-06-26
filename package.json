@@ -1,0 +1,19 @@
+{
+  "name": "scaffold-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "(sleep 1; open http://127.0.0.1:9966/test/test.html)& node_modules/beefy/bin/beefy test/test.js -- -t reactify"
+  },
+  "dependencies": {
+    "react": "^0.13.0",
+    "scaffold": "git+ssh://git@bitbucket.org/crafted/scaffold.git#master"
+  },
+  "devDependencies": {
+    "beefy": "^2.1.5",
+    "browserify": "^10.2.4",
+    "react-dnd": "^1.1.3",
+    "reactify": "^1.1.1"
+  }
+}

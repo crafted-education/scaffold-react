@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+  <head>
+    <title>scaffold-ui test</title>
+    <style>
+      
+      * {
+        font-family: Arial 
+      }
+      
+      .scaffold-column {
+        flex-grow: 1;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        position: relative;
+      }
+      
+      .scaffold-column:first-of-type {
+        margin-left: 0rem;
+      }
+      
+      .scaffold-column:last-of-type {
+        margin-right: 0rem;
+      }
+      
+      .column-borders .scaffold-column {
+          border-left: lightgray dashed 1px;
+          border-right: lightgray dashed 1px;
+      }
+      
+      .scaffold-column-id {
+        display: none;
+      }
+      
+      .column-ids .scaffold-column-id {
+        display: inherit;
+      }
+      
+      .scaffold-block-cell {
+        background-color: lightsteelblue;
+        margin-bottom: 0.25rem;
+        margin-top: 0.25rem;
+        padding: 1rem;
+        position: relative;
+      }
+      
+      .scaffold-column-group-cell {
+        align-content: stretch;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .column-group-borders .scaffold-column-group-cell {
+          border-top: lightgray solid 1px;
+          border-bottom: lightgray solid 1px;
+        }
+      
+      .scaffold-root {
+        margin: 0 auto !important;
+        border: none !important;
+        width: 800px;
+      }
+      
+      .scaffold-drop-target {
+        background-color: slategray;
+        color: white;
+        cursor: pointer;
+        opacity: 0;
+        text-align: center;
+      }
+      
+      .scaffold-drop-target:hover {
+        opacity: 1;
+      }
+      
+      .scaffold-column-drop-target,
+      .scaffold-replace-drop-target {
+        background-color: slategray;
+        color: white;
+        cursor: pointer;
+        height: 100;
+        opacity: 0;
+        text-align: center;
+        width: 1rem;
+      }
+
+      .scaffold-column-drop-target:hover,
+      .scaffold-replace-drop-target:hover {
+        opacity: 1;
+      }
+            
+      .scaffold-replace-drop-target.left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+      }
+      
+      .scaffold-replace-drop-target.right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+      
+      .scaffold-column-resizer {
+        background-color: lightgray;
+        cursor: col-resize;
+        height: 100;
+        opacity: 0;
+        width: 1rem;
+      }
+      
+      .scaffold-column-resizer:hover {
+        opacity: 1;
+      }
+
+      .scaffold-remove-button {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 1.2rem;
+        width: 1.5rem;
+        text-align: center;
+        color: white;
+        background-color: darkslategrey;
+        opacity: 0;
+      }
+      
+      .scaffold-block-cell:hover>.scaffold-remove-button,
+      .scaffold-column:hover>.scaffold-remove-button {
+        opacity: 1;
+      }
+
+      .scaffold-drag-handle {
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 1.2rem;
+        width: 1.5rem;
+        text-align: center;
+        color: white;
+        background-color: darkslategrey;
+        opacity: 0;
+      }
+      
+      .scaffold-block-cell:hover>.scaffold-drag-handle,
+      .scaffold-column:hover>.scaffold-drag-handle {
+        opacity: 1;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="main" class="column-borders column-group-borders"></div>
+    <script src="test.js"></script>
+  </body>
+
+</html>
