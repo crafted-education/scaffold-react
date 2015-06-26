@@ -3,7 +3,7 @@
 var React = require('react');
 var DndDropTarget = require('react-dnd').DropTarget;
 
-var blockId = 1;
+var contentId = 1;
 
 var DropTarget = React.createClass({
 
@@ -22,9 +22,9 @@ var DropTarget = React.createClass({
   
   onClick: function() {
     var scaffold = this.props.scaffoldSettings.scaffold;
-    var newBlockCell = scaffold.createBlockCell({id: 'DROP-' + blockId++});
+    var newContentCell = scaffold.createContentCell({id: 'DROP-' + contentId++});
     
-    this.props.parentColumn.addChildCell(newBlockCell, this.props.beforeCell);
+    this.props.parentColumn.addChildCell(newContentCell, this.props.beforeCell);
   }
 });
 

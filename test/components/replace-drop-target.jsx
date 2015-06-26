@@ -3,7 +3,7 @@
 var React = require('react');
 var DndDropTarget = require('react-dnd').DropTarget;
 
-var blockId = 1;
+var contentId = 1;
 
 var ReplaceDropTarget = React.createClass({
 
@@ -23,18 +23,18 @@ var ReplaceDropTarget = React.createClass({
   onClick: function() {
     var scaffold = this.props.scaffoldSettings.scaffold;
     
-    var placeBlockInRightColumn = false;
+    var placeContentInRightColumn = false;
     if(this.props.side === 'left') {
-       placeBlockInRightColumn = true;
+       placeContentInRightColumn = true;
     }
     
-    scaffold.replaceBlockWithColumns(this.props.cell, placeBlockInRightColumn);
+    scaffold.replaceContentWithColumns(this.props.cell, placeContentInRightColumn);
     
-    var newBlockCell = scaffold.createBlockCell({id: 'DROP-' + blockId++});
+    var newContentCell = scaffold.createContentCell({id: 'DROP-' + contentId++});
     
     var index = (this.props.side === 'left') ? 0 : 1;
     
-    this.props.cell.getParentColumn().getParentCell().getChildColumns()[index].addChildCell(newBlockCell);
+    this.props.cell.getParentColumn().getParentCell().getChildColumns()[index].addChildCell(newContentCell);
     
   }
 });
@@ -48,12 +48,12 @@ var spec = {
     var cellId = monitor.getItem().id;
     var cell = scaffold.getCellById(cellId);
 
-    var placeBlockInRightColumn = false;
+    var placeContentInRightColumn = false;
     if(props.side === 'left') {
-       placeBlockInRightColumn = true;
+       placeContentInRightColumn = true;
     }    
     
-    scaffold.replaceBlockWithColumns(props.cell, placeBlockInRightColumn);
+    scaffold.replaceContentWithColumns(props.cell, placeContentInRightColumn);
      
     var index = (props.side === 'left') ? 0 : 1;
     

@@ -1,9 +1,9 @@
 'use strict';
 
 var React = require('react');
-var BlockCell = require('scaffold').BlockCell;
+var ContentCell = require('scaffold').ContentCell;
 var ColumnGroupCell = require('scaffold').ColumnGroupCell;
-var BlockCellComponent = require('./scaffold-blockcell.jsx');
+var ContentCellComponent = require('./scaffold-contentcell.jsx');
 var ColumnGroupCellComponent = require('./scaffold-columngroupcell.jsx');
 
 var ScaffoldColumn = React.createClass({
@@ -15,8 +15,8 @@ var ScaffoldColumn = React.createClass({
     var renderCell = function(cell) {
       var cellComponent = null;
       
-      if(cell instanceof BlockCell) {
-        cellComponent = <BlockCellComponent key={cell.getId()} cell={cell} scaffoldSettings={settings} />;
+      if(cell instanceof ContentCell) {
+        cellComponent = <ContentCellComponent key={cell.getId()} cell={cell} scaffoldSettings={settings} />;
       }
       else if(cell instanceof ColumnGroupCell) {
         cellComponent = <ColumnGroupCellComponent key={cell.getId()} cell={cell} ColumnComponent={ScaffoldColumn} scaffoldSettings={settings}/>;

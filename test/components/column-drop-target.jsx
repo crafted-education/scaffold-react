@@ -3,7 +3,7 @@
 var React = require('react');
 var DndDropTarget = require('react-dnd').DropTarget;
 
-var blockId = 1;
+var contentId = 1;
 
 var ColumnDropTarget = React.createClass({
 

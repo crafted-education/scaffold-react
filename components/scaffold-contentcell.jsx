@@ -2,11 +2,11 @@
 
 var React = require('react');
 
-var ScaffoldBlockCell = React.createClass({
+var ScaffoldContentCell = React.createClass({
 
   render: function() {
     var settings = this.props.scaffoldSettings;
-    var canReplace = settings.scaffold.canReplaceBlockWithColumns(this.props.cell);
+    var canReplace = settings.scaffold.canReplaceContentWithColumns(this.props.cell);
     
     var removeButton = null;
     if(settings.includeRemoveButtons && settings.removeButtonComponent) {
@@ -26,9 +26,9 @@ var ScaffoldBlockCell = React.createClass({
     }
 
     return (
-      <div className="scaffold-block-cell">
+      <div className="scaffold-content-cell">
         {leftDropTarget}
-        <this.props.scaffoldSettings.blockComponent cell={this.props.cell} block={this.props.cell.getChildBlock()} />
+        <this.props.scaffoldSettings.contentComponent cell={this.props.cell} content={this.props.cell.getChildContent()} />
         {rightDropTarget}
         {removeButton}
         {dragHandle}
@@ -37,4 +37,4 @@ var ScaffoldBlockCell = React.createClass({
   }
 });
 
-module.exports = ScaffoldBlockCell;
+module.exports = ScaffoldContentCell;
