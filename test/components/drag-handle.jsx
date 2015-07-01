@@ -9,12 +9,8 @@ var DragHandle = React.createClass({
     var connectDragSource = this.props.connectDragSource;
     
     return connectDragSource(
-      <div className="scaffold-drag-handle" onClick={this.onClick}>|||</div>
+      <div className="scaffold-drag-handle">|||</div>
     );
-  },
-  
-  onClick: function() {
-    this.props.scaffoldObject.delete();
   }
 });
 
