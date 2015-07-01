@@ -61,6 +61,7 @@ var scaffoldSettings = {
   "includeColumnResizers": true,
   "includeRemoveButtons": true,
   "includeDragHandles": true,
+  "includeColumnDragHandles": false,
   "dropTargetComponent": DropTarget,
   "columnDropTargetComponent": ColumnDropTarget,
   "replaceDropTargetComponent": ReplaceDropTarget,

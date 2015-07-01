@@ -36,7 +36,7 @@ var ScaffoldColumn = React.createClass({
     }
         
     var dragHandle = null;
-    if(settings.includeDragHandles && settings.dragHandleComponent && !isRoot) {
+    if(settings.includeColumnDragHandles && settings.dragHandleComponent && !isRoot) {
       dragHandle = <settings.dragHandleComponent scaffoldObjectType="column" scaffoldObject={this.props.column} />;
     }
 
