@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "(sleep 1; open http://127.0.0.1:9966/test/test.html)& node_modules/beefy/bin/beefy test/test.js -- -t reactify"
+    "test": "(sleep 1; if hash xdg-open 2>/dev/null; then xdg-open http://127.0.0.1:9966/test/test.html; else open http://127.0.0.1:9966/test/test.html; fi)& node_modules/beefy/bin/beefy test/test.js -- -t reactify"
   },
   "dependencies": {
     "react": "^0.13.0",
