@@ -1,1 +1,1 @@
-module.exports = require('./components/scaffold.jsx');
+module.exports = require('./components/scaffold.js');
