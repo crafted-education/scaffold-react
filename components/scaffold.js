@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var ColumnComponent = require('../components/scaffold-column.jsx');
+var ColumnComponent = require('../components/scaffold-column.js');
 
 var React = require('react');
 
@@ -11,9 +11,7 @@ var Scaffold = React.createClass({
     var settings = this.props.scaffoldSettings;
     var root = settings.scaffold.getRootColumn();
     
-    return (
-       <ColumnComponent column={root} isRoot={true} scaffoldSettings={settings} />
-    );
+    return React.createElement(ColumnComponent, {"column": root, "isRoot": true, "scaffoldSettings": settings});
   }
 });
 

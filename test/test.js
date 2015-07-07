@@ -1,6 +1,6 @@
 var React = require('react');
 var Scaffold = require('scaffold').Scaffold;
-var ScaffoldComponent = require('../components/scaffold.jsx');
+var ScaffoldComponent = require('../components/scaffold.js');
 var DropTarget = require('./components/drop-target.jsx');
 var ColumnDropTarget = require('./components/column-drop-target.jsx');
 var ReplaceDropTarget = require('./components/replace-drop-target.jsx');
