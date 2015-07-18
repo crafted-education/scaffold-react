@@ -15,10 +15,10 @@ var ScaffoldColumn = React.createClass({
     var renderCell = function(cell) {
       var cellComponent = null;
 
-      if(cell instanceof ContentCell) {
+      if(cell.constructor.name === 'ContentCell') {
         cellComponent = React.createElement(ContentCellComponent, {"key": cell.getId(), "cell": cell, "scaffoldSettings": settings});
       }
-      else if(cell instanceof ColumnGroupCell) {
+      else if(cell.constructor.name === 'ColumnGroupCell') {
         cellComponent = React.createElement(ColumnGroupCellComponent, {"key": cell.getId(), "cell": cell, "ColumnComponent": ScaffoldColumn, "scaffoldSettings": settings});
       }
       
