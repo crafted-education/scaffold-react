@@ -74,7 +74,23 @@ var HTML5Backend = require('react-dnd/modules/backends/HTML5');
 var DragDropContext = require('react-dnd').DragDropContext;
 
 ScaffoldComponent = DragDropContext(HTML5Backend)(ScaffoldComponent);
-var rootComponent = <ScaffoldComponent scaffoldSettings={scaffoldSettings} />;
+var rootComponent = <ScaffoldComponent   
+											scaffold={scaffold}
+											includeDropTargets="true"
+											includeColumnDropTargets="true"
+											includeReplaceDropTargets="true"
+											includeColumnResizers="true"
+											includeRemoveButtons="true"
+											includeDragHandles="true"
+											includeColumnDragHandles="true"
+											dropTargetComponent={DropTarget}
+											columnDropTargetComponent={ColumnDropTarget}
+											replaceDropTargetComponent={ReplaceDropTarget}
+											contentComponent={Content}
+											columnResizerComponent={ColumnResizer}
+											removeButtonComponent={RemoveButton}
+											dragHandleComponent={DragHandle}
+ 										/>;
 
 setInterval(function() {
   React.render(rootComponent, document.getElementById('main'));
