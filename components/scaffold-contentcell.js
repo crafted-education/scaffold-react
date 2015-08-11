@@ -27,7 +27,7 @@ var ScaffoldContentCell = React.createClass({
 
     return React.createElement('div', {"className": "scaffold-content-cell"}, [
       leftDropTarget,
-      React.createElement(this.props.scaffoldSettings.contentComponent, {"key": this.props.cell.getId(), "cell": this.props.cell, "content": this.props.cell.getChildContent()}),
+      React.createElement(this.props.scaffoldSettings.contentComponent, {"key": this.props.cell.getId(), "cell": this.props.cell, "scaffold":  this.props.scaffoldSettings.scaffold, "content": this.props.cell.getChildContent()}),
       rightDropTarget,
       removeButton,
       dragHandle,
