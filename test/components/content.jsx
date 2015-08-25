@@ -6,7 +6,7 @@ var Content = React.createClass({
 
   render: function() {
     return (
-       <div>CONTENT CELL - id: {this.props.cell.getId()}, contentId: {this.props.content.id}</div>
+       <div>CONTENT CELL - id: {this.props.cell.getId()}, contentId: {this.props.content.id}, customProp: {this.props.testProp}</div>
     );
   }
 });
