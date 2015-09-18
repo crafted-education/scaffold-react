@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "react": "^0.13.0",
-    "scaffold": "git+ssh://git@bitbucket.org/crafted/scaffold.git#master"
+    "scaffold": "git+ssh://git@github.com:crafted-education/scaffold.git#master"
   },
   "devDependencies": {
     "beefy": "^2.1.5",
